@@ -1,7 +1,8 @@
 ---
-title: android相关的知识点总结
-category: Handler源码分析
-order: 2
+
+category: android相关的知识点总结
+title: Handler源码分析
+order: 1
 ---
 
 ### 第一部分：基础定义
