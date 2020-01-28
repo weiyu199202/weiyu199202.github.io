@@ -377,11 +377,9 @@ public static void loop() {
 
 主要原因有2个
 
-1. epoll模型 
+1.epoll模型 当没有消息的时候会epoll.wait，等待句柄写的时候再唤醒，这个时候其实是阻塞的。
 
-当没有消息的时候会epoll.wait，等待句柄写的时候再唤醒，这个时候其实是阻塞的。
-
-1. 所有的ui操作都通过handler来发消息操作。 
+2.所有的ui操作都通过handler来发消息操作。 
 
 比如屏幕刷新16ms一个消息，你的各种点击事件，所以就会有句柄写操作，唤醒上文的wait操作，所以不会被卡死了。
 
@@ -391,7 +389,7 @@ public static void loop() {
 
 线程：线程对应用来说非常常见，比如每次new Thread().start都会创建一个新的线程。该线程与App所在进程之间资源共享，从Linux角度来说进程与线程除了是否共享资源外，并没有本质的区别，都是一个task_struct结构体，在CPU看来进程或线程无非就是一段可执行的代码，CPU采用CFS调度算法，保证每个task都尽可能公平的享有CPU时间片。
 
-链接：https://www.zhihu.com/question/34652589/answer/90344494
+[参考链接]: https://www.zhihu.com/question/34652589/answer/90344494
 
 **(1) Android中为什么主线程不会因为Looper.loop()里的死循环卡死？**
 
