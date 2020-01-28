@@ -1,7 +1,7 @@
 ---
-title: Images
-category: Media
-order: 1
+title: mytest
+category: mytest2
+order: 4
 ---
 
 Share images with your friends! Send photos and pictures from your computer, phone or camera.
