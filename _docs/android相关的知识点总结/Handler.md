@@ -1,6 +1,6 @@
 ---
-title: android相关的知识点总结
-category: Handler源码分析
+title: Handler源码分析
+category: android相关的知识点总结
 order: 1
 ---
 
