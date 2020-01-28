@@ -6,16 +6,21 @@ order: 1
 
 
 
-//以下为模板
+### **第一部分：基础定义**
 
-Sync your Facebook contacts with ChatApp. Any of your Facebook friends with ChatApp accounts are automatically added to your contact list!
+1. **作用：子线程与主线程通过Handler来进行通信。子线程可以通过Handler来通知主线程进行UI更新。（准确来讲指的是线程间的通信）**
 
-> Signing up with Facebook automatically starts syncing contacts.
+2. **过程：handler通过 sendMessage 方法发送信息到消息队列 MessageQueue，Looper不断轮询MessageQueue里面的消息Message，一旦有未延时的消息，就回调用handler的dispatchMessage方法然后返回给handleMessage方法使用。**
 
-To sync your contacts:
+   原理图如下:
 
-1. Open your *User Settings*
-2. Select the **Connect Facebook** button
-3. Authorise ChatApp
+   ![](https:weiyu199202.github.io\images\handler原理图.png)
 
-![](//placehold.it/800x600)
+   
+
+
+
+
+
+
+
