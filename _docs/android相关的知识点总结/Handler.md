@@ -14,7 +14,7 @@ order: 1
 
    原理图如下:
 
-   ![](https:weiyu199202.github.io\images\handler原理图.png)
+   ![](\images\handler原理图.png)
 
    
 
